@@ -169,10 +169,10 @@ python app.py
 - Create more detailed improvement plans with step-by-step guides
 - Develop mobile application version
 
-## 👥 Team
-TANAY  - https://github.com/tanayvasishtha
-PANKAJ - https://github.com/Pankajkr-18
-KESHAB -
+## 👥 Team 
+- TANAY  - https://github.com/tanayvasishtha
+- PANKAJ - https://github.com/Pankajkr-18
+- KESHAB -
 
 ---
 
