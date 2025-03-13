@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Improvement Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Credit Score Improvement Advisor</h1>
+            <p class="tagline">"We Personalize Your Path to Credit Excellence"</p>
+        </header>
+
+        <main>
+            <!-- Input Form Section -->
+            <section id="input-section">
+                <h2>Enter Your Credit Information</h2>
+                
+                <form id="credit-form">
+                    <div class="form-group">
+                        <label for="current_score">Current Credit Score (300-850):</label>
+                        <input type="number" id="current_score" name="current_score" min="300" max="850" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target_score">Target Credit Score (300-850):</label>
+                        <input type="number" id="target_score" name="target_score" min="300" max="850" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthly_income">Monthly Income ($):</label>
+                        <input type="number" id="monthly_income" name="monthly_income" min="0" step="100" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="credit_utilization">Credit Utilization (%):</label>
+                        <input type="number" id="credit_utilization" name="credit_utilization" min="0" max="100" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Get Personalized Advice</button>
+                </form>
+            </section>
+            
+            <!-- Results Section (hidden initially) -->
+            <section id="results-section" style="display: none;">
+                <h2>Your Personalized Credit Improvement Plan</h2>
+                
+                <div class="results-container">
+                    <div class="score-overview">
+                        <h3>Credit Score Overview</h3>
+                        <div class="score-chart-container">
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                        <div class="score-details">
+                            <p>Current Score: <span id="result-current-score"></span></p>
+                            <p>Target Score: <span id="result-target-score"></span></p>
+                            <p>Score Gap: <span id="result-score-gap"></span> points</p>
+                            <p>Estimated Timeline: <span id="result-timeline"></span> months</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendations">
+                        <h3>Personalized Recommendations</h3>
+                        <ul id="recommendations-list">
+                            <!-- Recommendations will be populated here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="loan-eligibility">
+                        <h3>Loan Eligibility Status</h3>
+                        <div class="eligibility-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Loan Type</th>
+                                        <th>Status</th>
+                                        <th>Min. Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="personal-loan-row">
+                                        <td>Personal Loan</td>
+                                        <td class="status"></td>
+                                        <td>670</td>
+                                    </tr>
+                                    <tr id="car-loan-row">
+                                        <td>Auto Loan</td>
+                                        <td class="status"></td>
+                                        <td>660</td>
+                                    </tr>
+                                    <tr id="home-loan-row">
+                                        <td>Home Loan</td>
+                                        <td class="status"></td>
+                                        <td>740</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="back-btn" class="back-btn">Enter New Information</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Credit Score Improvement Advisor | BY TANAY, KESHAB, PANKAJ (AD LAB)</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
