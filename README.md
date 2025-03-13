@@ -170,8 +170,9 @@ python app.py
 - Develop mobile application version
 
 ## 👥 Team
-
--  [ TANAY, PANKAJ, KESHAB ]
+TANAY  - https://github.com/tanayvasishtha
+PANKAJ - https://github.com/Pankajkr-18
+KESHAB -
 
 ---
 
